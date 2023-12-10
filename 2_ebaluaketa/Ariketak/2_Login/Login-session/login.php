@@ -15,12 +15,12 @@
     ini_set('display_errors', 1);
 
     
-    // Verificar si la sesión está activa
-    if (isset($_SESSION["erabiltzailea"]) && isset($_SESSION['ultimo_acceso']) && (time() - $_SESSION['ultimo_acceso']) <= $tiempoExpiracion) {
+    //* Verificar si la sesión está activa
+    /*if (isset($_SESSION["erabiltzailea"]) && isset($_SESSION['ultimo_acceso']) && (time() - $_SESSION['ultimo_acceso']) <= $tiempoExpiracion) {
         // La sesión está activa, redirigir a la página protegida
         header("Location: usuario.php");
         exit();
-    }
+    }*/
     /*if (isset($_SESSION["erabiltzailea"])) {
         // Comprobar si la sesion ha expirado
         if (isset($_SESSION['ultimo_acceso']) && (time() - $_SESSION['ultimo_acceso']) > $tiempoExpiracion) {            
@@ -53,25 +53,9 @@
             die("Error de conexión: " . mysqli_connect_error());
         }
 
-
-        //$hashed_password_from_db = $db->lortuPasahitza($conn, $erabiltzailea);
-
-        ////$db->kontsultaErabiltzaile($conn);
-
-        // $usuarioCorrecto = $db->kontsultaErabiltzaile($conn, $erabiltzailea, $pasahitza);
-
-        // if ($usuarioCorrecto) {
-
         // Verificar si el usuario existe y la contraseña es valida
         if ($erabiltzailea === "db" && $db->erabiltzaileaExistitzenDa($conn, $erabiltzailea) && password_verify($pasahitza, $db->lortuPasahitza($conn, $erabiltzailea))) {            
-            // todo: Guardar en las cookies (con una duración de una hora, puedes ajustar esto según tus necesidades)
-            // setcookie("erabiltzailea", $erabiltzailea, time() + 3600, "/");
-            // setcookie("pasahitza", $pasahitza, time() + 3600, "/");
-
-            // También puedes guardar los datos en la sesión si lo deseas
             $_SESSION["erabiltzailea"] = $erabiltzailea;
-
-            // Actualizar el tiempo de la ultima actividad en la sesion
             $_SESSION['ultimo_acceso'] = time();
 
             // Establecer una variable de sesión para indicar éxito
