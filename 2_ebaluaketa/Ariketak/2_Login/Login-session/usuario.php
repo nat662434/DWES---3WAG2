@@ -15,7 +15,7 @@ if (!isset($_SESSION["erabiltzailea"])){
 }
 
 // Actualizar el tiempo de la ultima actividad en la sesion
-$_SESSION['ultimo_acceso'] = time();
+// $_SESSION['ultimo_acceso'] = time();
 
 // Cierre de sesion despues de 2 minutos de inactividad
 $tiempoExpiracion = 120;

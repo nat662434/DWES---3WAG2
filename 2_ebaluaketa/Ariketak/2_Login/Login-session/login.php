@@ -1,40 +1,16 @@
 <?php
+    session_start();
     // Establecer el tiempo de expiracion de la sesion
     $tiempoExpiracion = 120; // 2 minutos en segundos
     session_set_cookie_params($tiempoExpiracion, "/");
 
     //Establecer el tiempo maximo de vida de la sesion en segundos
     ini_set('session.gc_maxlifetime', $tiempoExpiracion);
-
-    //session_cache_expire(2); // Extablecer el tiempo maximo de vida de la sesion en minutos
-    
-    session_start();
     
     // Mostrar errores de PHP
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
 
-    
-    //* Verificar si la sesión está activa
-    /*if (isset($_SESSION["erabiltzailea"]) && isset($_SESSION['ultimo_acceso']) && (time() - $_SESSION['ultimo_acceso']) <= $tiempoExpiracion) {
-        // La sesión está activa, redirigir a la página protegida
-        header("Location: usuario.php");
-        exit();
-    }*/
-    /*if (isset($_SESSION["erabiltzailea"])) {
-        // Comprobar si la sesion ha expirado
-        if (isset($_SESSION['ultimo_acceso']) && (time() - $_SESSION['ultimo_acceso']) > $tiempoExpiracion) {            
-            // La sesion ha expirado, destruir la sesion y redirigir a login.php
-            session_unset();
-            session_destroy();
-            header("Location: login.php");
-            exit();
-
-        }
-        // La sesión está activa, redirigir a la página protegida
-        header("Location: usuario.php");
-        exit();
-    }*/
     
     //?session_regenerate_id(true);
 
