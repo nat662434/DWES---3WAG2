@@ -13,24 +13,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('welcome');
-});*/
-Route::get('/', 'App\Http\Controllers\Welcome_Controller@welcome');
+});
 
-/*Route::get('ikasleak', function(){
+Route::get('ikasleak', function(){
     return view('ikasleak_bista');
-});*/
-Route::get('ikasleak', 'App\Http\Controllers\Ikasleak_Controller@ikasleak');
+});
 
-/*Route::get('ikasleak/adina/{zbk}', function($zbk){
-    return view('ikasleak_bista', ['zbk'=>$zbk]);
-})->where('zbk', '[0-9]+');*/
+Route::get('irakasleak', function(){
+    return view('irakasleak_bista');
+});
 
 Route::get('ikasgaiak', function(){
     return view('ikasgaiak_bista');
 });
 
-Route::get('ikasgaiak/iragazkia/{letra}', function($letra){
-    return view('iragazkia_bista', ['letra'=>$letra]);
+Route::get('notak', function(){
+    return view('notak_bista');
 });
+// })->name(notak);
+
+Route::get('gelak/id/{zbk}', function($zbk){
+    return view('gelak_bista', ['zbk'=>$zbk]);
+})->where('zbk','[0-9]+');

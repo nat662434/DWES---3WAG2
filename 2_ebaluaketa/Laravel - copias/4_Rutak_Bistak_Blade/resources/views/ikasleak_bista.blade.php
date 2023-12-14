@@ -21,11 +21,11 @@
             ];
     @endphp
 
-    @if (!$zbk)
+    {{-- @if (!$zbk)
         <h1>{{ $zbk }} urte baino gehiago duten ikasleak</h1>
     @else
         <h1>Ikasle zerrenda</h1>
-    @endif
+    @endif --}}
 
     <table border=1>
         <tr>
@@ -34,11 +34,11 @@
         </tr>
         <tr>
             @foreach ($ikasleak as $ikasle)
-                @if ($ikasle['adina'] > $zbk)
+                {{-- @if ($ikasle['adina'] > $zbk) --}}
                     <td>{{ $ikasle['izena'] }}</td>
                     <td>{{ $ikasle['adina'] }}</td>
         </tr>
-        @endif
+        {{-- @endif --}}
         @endforeach
     </table>
 </body>
