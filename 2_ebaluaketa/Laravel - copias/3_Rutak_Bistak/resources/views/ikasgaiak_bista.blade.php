@@ -11,35 +11,31 @@
 <body>
     <h1>Ikasgaiak</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Ikasgaia</th>
-                <th>Deskribapena</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>DAW</td>
-                <td>Web aplikazio garapena</td>
-            </tr>
-            <tr>
-                <td>SIS</td>
-                <td>Sistema informatikoak</td>
-            </tr>
-            <tr>
-                <td>FOL</td>
-                <td>Formacion y orientacion laboral</td>
-            </tr>
-            <tr>
-                <td>WEC</td>
-                <td>Web aplikazio bezero ingurunean</td>
-            </tr>
-            <tr>
-                <td>DIW</td>
-                <td>Diseño de interfaz web</td>
-            </tr>
-        </tbody>
+    <table border=1>
+        <tr>
+            <th>Ikasgaia</th>
+            <th>Deskribapena</th>
+        </tr>
+        <tr>
+            <td>DAW</td>
+            <td>Web aplikazio garapena</td>
+        </tr>
+        <tr>
+            <td>SIS</td>
+            <td>Sistema informatikoak</td>
+        </tr>
+        <tr>
+            <td>FOL</td>
+            <td>Formacion y orientacion laboral</td>
+        </tr>
+        <tr>
+            <td>WEC</td>
+            <td>Web aplikazio bezero ingurunean</td>
+        </tr>
+        <tr>
+            <td>DIW</td>
+            <td>Diseño de interfaz web</td>
+        </tr>
     </table>
 </body>
 

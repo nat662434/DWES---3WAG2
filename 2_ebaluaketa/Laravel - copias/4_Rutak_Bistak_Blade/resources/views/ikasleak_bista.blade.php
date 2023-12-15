@@ -1,3 +1,7 @@
+@extends('plantilla_bista')
+@section ('title', 'Pagina1')
+
+@section('content')
 <!DOCTYPE html>
 <html>
 
@@ -19,28 +23,34 @@
             ['izena' => 'Ainhoa', 'adina' => 19],
             ['izena' => 'Jon', 'adina' => 23],
             ];
+
+            $zbk = request()->segment(3); // conseguir en numero de la url
+
+            // comprobar que $zbk es un numero
+            $zbk = is_numeric($zbk) ? $zbk : null;
     @endphp
 
-    {{-- @if (!$zbk)
+    @if ($zbk != null)
         <h1>{{ $zbk }} urte baino gehiago duten ikasleak</h1>
     @else
         <h1>Ikasle zerrenda</h1>
-    @endif --}}
+    @endif
 
     <table border=1>
         <tr>
             <th>Izena</th>
             <th>Abizena</th>
         </tr>
-        <tr>
-            @foreach ($ikasleak as $ikasle)
-                {{-- @if ($ikasle['adina'] > $zbk) --}}
+        @foreach ($ikasleak as $ikasle)
+            @if ($ikasle['adina'] > $zbk)
+                <tr>
                     <td>{{ $ikasle['izena'] }}</td>
                     <td>{{ $ikasle['adina'] }}</td>
-        </tr>
-        {{-- @endif --}}
+                </tr>
+            @endif
         @endforeach
     </table>
 </body>
 
 </html>
+@endsection

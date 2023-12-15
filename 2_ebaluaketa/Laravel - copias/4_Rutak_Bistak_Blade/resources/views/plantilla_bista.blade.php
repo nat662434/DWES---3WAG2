@@ -1,77 +1,64 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Web</title>
+    <title>@yield('title', 'Mi Aplicación')</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em;
         }
 
         nav {
-            background-color: #444;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0.5em 1em;
-            margin: 0 0.5em;
-        }
-
-        nav a:hover {
-            background-color: #555;
-        }
-
-        main {
-            padding: 1em;
-        }
-
-        footer {
             background-color: #333;
-            color: #fff;
+            color: white;
+            padding: 10px;
             text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        div {
+            padding: 20px;
         }
     </style>
+    <!-- Puedes incluir aquí tus estilos, scripts, meta tags, etc. -->
 </head>
+
 <body>
-
-    <header>
-        <h1></h1>
-    </header>
-
     <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Acerca de</a>
-        <a href="#">Contacto</a>
+        <ul>
+            <li><a href="{{ route('ikasleak') }}">Ikasleak</a></li>
+            <li><a href="{{ route('ikasleakAdina', ['zbk' => 19]) }}">Ikasleak filtroa</a></li>
+            <li><a href="{{ route('ikasgaiak') }}">Ikasgaiak</a></li>
+            <li><a href="{{ route('ikasgaiakLetra', ['letra' => 'w']) }}">Ikasgaiak filtroa</a></li>
+            <!-- Agrega más elementos de menú según sea necesario -->
+        </ul>
     </nav>
 
-    <main>
-        <h2>Contenido Principal</h2>
-        <p></p>
-    </main>
+    <div>
+        @yield('content')
+    </div>
 
-    <footer>
-        <p>&copy; Natalia</p>
-    </footer>
-
+    <!-- Puedes incluir aquí scripts adicionales, pie de página, etc. -->
 </body>
+
 </html>

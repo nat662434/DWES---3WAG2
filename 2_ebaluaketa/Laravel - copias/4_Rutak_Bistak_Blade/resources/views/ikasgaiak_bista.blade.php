@@ -1,4 +1,8 @@
-{{-- @extends('plantilla_bista') --}}
+@extends('plantilla_bista')
+@section ('title', 'Pagina1')
+
+@section('content')
+
 <!DOCTYPE html>
 <html>
 
@@ -20,12 +24,39 @@
             'Proiektua' => 40,
         ];
 
+        $letra = strtoupper(request()->segment(3)); //coger la letra de la url
+        $letra = is_string($letra) ? $letra : null;
+
+
     @endphp
 
-    <h1>Ikasle zerrenda</h1>
+    @if ($letra)
+        <h1>{{ $letra }} letratik hasten diren ikasgaiak</h1>
+    @else
+        <h1>Ikasgai zerrenda</h1>
+    @endif
+
+
     <table border=1>
-        th
+        <tr>
+            <th>Ikasgaia</th>
+            <th>Orduak</th>
+        </tr>
+        @foreach ($ikasgaiak as $ikasgai => $orduak)
+            @if($letra && substr($ikasgai, 0, 1) === $letra)
+                <tr>
+                    <td>{{ $ikasgai }}</td>
+                    <td>{{ $orduak }}</td>
+                </tr>
+            @else
+                <tr>
+                    <td>{{ $ikasgai }}</td>
+                    <td>{{ $orduak }}</td>
+                </tr>
+            @endif
+        @endforeach
     </table>
 </body>
 
 </html>
+@endsection

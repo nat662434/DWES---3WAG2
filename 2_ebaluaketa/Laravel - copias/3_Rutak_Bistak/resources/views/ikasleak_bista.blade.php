@@ -1,9 +1,9 @@
-@extends('welcome')
+{{-- @extends('welcome')
 @section('sesioa1')
 <h1>ikasleen taula</h1>
-@endsection
+@endsection --}}
 
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -16,44 +16,42 @@
 <body>
     <h1>Ikasleak</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Izena</th>
-                <th>Abizena</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Rita</td>
-                <td>Gonzales</td>
-            </tr>
-            <tr>
-                <td>Genesis</td>
-                <td>Diaz</td>
-            </tr>
-            <tr>
-                <td>Erica</td>
-                <td>Barrett</td>
-            </tr>
-            <tr>
-                <td>Johnni</td>
-                <td>Miller</td>
-            </tr>
-            <tr>
-                <td>Charlie</td>
-                <td>Young</td>
-            </tr>
-            <tr>
-                <td>Bernard</td>
-                <td>Hunter</td>
-            </tr>
-            <tr>
-                <td>Kylie</td>
-                <td>Jackson</td>
-            </tr>
-        </tbody>
+    <table border=1>
+        <tr>
+            <th>Izena</th>
+            <th>Abizena</th>
+        </tr>
+    
+    
+        <tr>
+            <td>Rita</td>
+            <td>Gonzales</td>
+        </tr>
+        <tr>
+            <td>Genesis</td>
+            <td>Diaz</td>
+        </tr>
+        <tr>
+            <td>Erica</td>
+            <td>Barrett</td>
+        </tr>
+        <tr>
+            <td>Johnni</td>
+            <td>Miller</td>
+        </tr>
+        <tr>
+            <td>Charlie</td>
+            <td>Young</td>
+        </tr>
+        <tr>
+            <td>Bernard</td>
+            <td>Hunter</td>
+        </tr>
+        <tr>
+            <td>Kylie</td>
+            <td>Jackson</td>
+        </tr>
     </table>
 </body>
 
-</html> -->
+</html>
