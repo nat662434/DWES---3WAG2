@@ -5,5 +5,5 @@
     */
     require '../db.php';
 
-    $db->
+    // $db->
 ?>

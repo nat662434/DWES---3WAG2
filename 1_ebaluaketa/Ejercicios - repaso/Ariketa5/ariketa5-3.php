@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Ariketa 5 - 3</title>
 </head>
+
 <body>
-    <h1>Ariketa 5 - 3</h1>    
+    <h1>Ariketa 5 - 3</h1>
     <table>
         <tr>
             <td>Ikaslea</td>
@@ -15,7 +17,8 @@
 
 
 
-    <?php datuakBiztaratu(){
+    <?php 
+    function datuakBiztaratu(){
         $balioa = "";
         $notak = array(array("ikaslea" => "Jon", "nota" => 8), array("ikaslea" => "Ane", "nota" => 6), array("ikaslea" => "Markel", "nota" => 3));
         foreach ($notak as $ikasle) {
@@ -26,11 +29,12 @@
             } elseif ($ikasle["nota"] > 7) {
                 $baliao = "Oso ona";
             }?>
-            <tr>
-                <td><?php echo $ikasle["ikaslea"] ?></td>
-                <td><?php echo $ikasle["nota"] ?></td>
-            </tr>
-        <?php }    
+    <tr>
+        <td><?php echo $ikasle["ikaslea"] ?></td>
+        <td><?php echo $ikasle["nota"] ?></td>
+    </tr>
+    <?php }    
     } ?>
 </body>
+
 </html>
