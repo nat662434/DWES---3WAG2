@@ -17,22 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('ikasleak', function () {
-    return view('ikasleak_bista');
-});
-
-Route::get('irakasleak', function () {
-    return view('irakasleak_bista');
-});
-
-Route::get('ikasgaiak', function () {
-    return view('ikasgaiak_bista');
-});
-
-Route::get('notak', function () {
-    return view('notak_bista');
-});
-
-Route::get('gelak/id/{zbk}', function ($zbk) {
-    return view('gelak_bista', ['zbk' => $zbk]);
-});
+Route::get('ikasgaiak', 'App\Http\Controllers\ikasgaiak_controller@index')->name('ikasgaiak');
