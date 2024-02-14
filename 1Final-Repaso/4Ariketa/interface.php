@@ -1,5 +1,5 @@
 <?php
-    interface DatuakKudeatu {
-        public function switchAnimaliak ();
-    }
+/* interface DatuakKudeatu {
+    public function switchAnimaliak ();
+} */
 ?>
